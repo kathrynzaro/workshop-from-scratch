@@ -1,4 +1,4 @@
-import { redirectIfLoggedIn, signInUser, signupUser } from './fetch-utils.js';
+import { getWorkshops, redirectIfLoggedIn, signInUser, signupUser } from './fetch-utils.js';
 
 const signInForm = document.getElementById('sign-in');
 const signInEmail = document.getElementById('sign-in-email');
@@ -32,3 +32,5 @@ signInForm.addEventListener('submit', async (event) => {
         console.error(user);
     }
 });
+
+
