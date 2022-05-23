@@ -7,7 +7,7 @@ const test = QUnit.test;
 test('renderWorkshop', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="workshop"><h2>Bartending 101</h2><ul><li>Dee: dee@paddys.com</li></ul></div>`;
+    const expected = `<div class="workshop"><h2>Bartending 101</h2></div>`;
     
     //Act 
     // Call the function you're testing and set the result to a const
