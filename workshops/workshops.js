@@ -1,4 +1,4 @@
-import { checkAuth, logout, getWorkshops } from '../fetch-utils.js';
+import { checkAuth, logout, getWorkshops, deleteParticipant } from '../fetch-utils.js';
 import { renderWorkshop } from '../render-utils.js';
 
 checkAuth();
@@ -20,7 +20,10 @@ async function displayWorkshops() {
         for (let participant of workshop.participants) {
             const li = document.createElement('li');
             li.textContent = `${participant.name}: ${participant.contact_info}`;
-
+            li.addEventListener('click', async () => {
+                await deleteParticipant(participant.id);
+                displayWorkshops();
+            });
             ul.append(li);
         }
         workshopEl.append(ul);
