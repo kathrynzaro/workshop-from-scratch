@@ -3,7 +3,7 @@ import { renderOption } from '../render-utils.js';
 
 const workshopSelect = document.getElementById('workshops');
 const participantForm = document.getElementById('new-participant');
-
+const backBtn = document.getElementById('back');
 
 async function onLoad() {
     const workshops = await getWorkshops();
@@ -23,5 +23,9 @@ participantForm.addEventListener('submit', async (e) => {
         contact_info: form.get('contact'),
         workshop_id: form.get('workshop_id'),
     });
+    window.location.href = '/workshops';
+});
+
+backBtn.addEventListener('click', () => {
     window.location.href = '/workshops';
 });

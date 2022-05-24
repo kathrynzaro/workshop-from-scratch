@@ -9,6 +9,13 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
+const addButton = document.getElementById('add-participant');
+
+addButton.addEventListener('click', () => {
+    window.location.href = '/create';
+});
+
+
 async function displayWorkshops() {
     const main = document.querySelector('main');
     main.textContent = '';
