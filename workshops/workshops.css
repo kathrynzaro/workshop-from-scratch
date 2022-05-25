@@ -3,12 +3,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: flex-start;
-    margin: 50px 100px;
+    justify-content: center;
+    margin: 50px 50px;
+    overflow: auto;
+}
+
+footer {
+    height: 50px;
 }
 
 .workshop {
-    width: 300px;
+    width: 285px;
     margin: 10px;
     padding: 20px 10px;
     color: white;
@@ -25,7 +30,7 @@ button {
 li {
     font-family: 'Karla', sans-serif;
     width: fit-content;
-    margin: 5px;
+    margin: 2px;
     font-size: .8rem;
     line-height: 15px;
     text-transform: lowercase;
@@ -45,7 +50,7 @@ li:hover {
 h2 {
     text-align: center;
     font-size: 1.3rem;
-    margin: 20px 50px;
+    margin: 20px 45px;
 }
 
 h1 {
